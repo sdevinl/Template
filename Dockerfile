@@ -20,6 +20,7 @@ RUN	apt-get install htop
 
 # 3) install packages
 RUN pip install --no-cache-dir networkx scipy python-louvain
+RUN conda install --yes numpy pandas scipy torch 
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
